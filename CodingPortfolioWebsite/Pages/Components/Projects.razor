@@ -1,0 +1,44 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> L
+
+<div id="projects" class="container fade-in mt-5 pt-5">
+    <h2 class="section-title">@L["Project_Title"]</h2>
+
+    <div class="d-flex justify-content-around">
+        @foreach (var proj in projects)
+        {
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card project-card shadow-sm p-1">
+                    <img src="@proj.Image" class="card-img-top" alt=@L[proj.TitleKey] />
+                    <div class="card-body">
+                        <h5 class="card-title">@L[proj.TitleKey]</h5>
+                        <p class="card-text">@L[proj.DescriptionKey]</p>
+                        <a href="@proj.Link" target="_blank" class="btn btn-primary">@L["Project_ViewButton"]</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+        record Project(string TitleKey, string DescriptionKey, string Image, string Link);
+
+        List<Project> projects = new()
+    {
+        new Project(
+            "Project_HabitTracker_Title",
+            "Project_HabitTracker_Desc",
+            "images/habit_tracker1.png",
+            "https://github.com/juusosav/HabitTracker"),
+        new Project(
+            "Project_ExpenseTracker_Title",
+            "Project_ExpenseTracker_Desc",
+            "images/expense_tracker1.png",
+            "https://github.com/juusosav/ExpenseTracker"),
+        new Project(
+            "Project_PortfolioSite_Title",
+            "Project_PortfolioSite_Desc",
+            "images/portfolio_screenshot.png",
+            "link here")
+    };
+}

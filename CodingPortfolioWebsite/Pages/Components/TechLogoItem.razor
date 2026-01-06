@@ -1,0 +1,14 @@
+﻿@using CodingPortfolioWebsite.Models;
+
+<div class="techstack-image p-4">
+    <img src="@Logo" title="@Name" alt="@Name" />
+</div>
+
+
+@code {
+    [Parameter]
+    public string Logo { get; set; } = default!;
+
+    [Parameter]
+    public string Name { get; set; } = default!;
+}

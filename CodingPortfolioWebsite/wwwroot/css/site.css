@@ -1,0 +1,100 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+.navbar-brand {
+    color: white;
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.navbar-brand.visible {
+    opacity: 1;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    text-decoration: none;
+    color: grey;
+}
+
+.nav-lang {
+    margin-bottom: 2px;
+    height: 1rem;
+    background-color: black;
+}
+
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, #1e1e1e, #2e2e2e);
+    color: white;
+}
+
+.dynamic-text {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+    font-weight: bold;
+    color: #66d1ff;
+}
+
+    .dynamic-text.fade-out {
+        opacity: 0;
+    }
+
+.section-title {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.project-card {
+    height: 100%;
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    flex: 0 1 auto;
+    object-fit: contain;
+}
+
+.about-image {
+    border-radius: 8px;
+    width: clamp(25%, 25%, 100%);
+    height: auto;
+    flex: 0 0 auto;
+    object-fit: cover;
+}
+
+.about-text {
+    width: 20rem;
+    font-weight: 375;
+    color: black;
+}
+
+.techstack-image img {
+    width: auto;
+    height: 5rem;
+    transition: 0.3s ease;
+}
+
+.techstack-image img:hover {
+    transform: scale(1.10);
+}
+
+#blazor-error-ui {
+    display: none !important;
+}
+
+.form-box {
+    padding: 0 25%;
+    justify-content: center;
+    align-items: center;
+}

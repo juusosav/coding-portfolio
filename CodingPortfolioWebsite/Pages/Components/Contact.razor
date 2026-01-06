@@ -1,0 +1,56 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> L
+
+<div id="contact" class="container fade-in mt-5 pt-5">
+    <h2 class="section-title">@L["Contact_ContactMe"]</h2>
+
+    <form class="form-box" id="contactForm" 
+        @ref="contactFormref" 
+        @onsubmit="HandleSubmit" 
+        @onsubmit:preventDefault>
+
+        <div class="mb-3">
+            <input class="form-control" name="name" placeholder=@L["Contact_Form_Name"] required />
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control" name="email" placeholder=@L["Contact_Form_Email"] required />
+        </div>
+
+        <div class="mb-3">
+            <textarea class="form-control" name="message" rows="5" placeholder=@L["Contact_Form_Message"] required></textarea>
+        </div>
+
+        <button class="btn btn-primary" type="submit" disabled="@isSending">
+            @(isSending ? @L["Contact_Sending"] : L["Contact_SendMessage"])
+        </button>
+        <p class="mt-3">@statusMessage</p>
+    </form>
+
+</div>
+
+@code {
+    private ElementReference contactFormref;
+    private bool isSending = false;
+    private string statusMessage = string.Empty;
+
+    [Inject] IJSRuntime JS { get; set; } = default!;
+
+    private async Task HandleSubmit()
+    {
+        isSending = true;
+        statusMessage = "";
+
+        var result = await JS.InvokeAsync<bool>("sendEmail", contactFormref);
+
+        if (result)
+        {
+            statusMessage = L["Contact_StatusMessageSent"];
+        }
+        else
+        {
+            statusMessage = L["Contact_StatusMessageSendFailed"];
+        }
+
+        isSending = false;
+    }
+}

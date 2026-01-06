@@ -1,0 +1,21 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> L
+
+<div id="about" class="container fade-in mt-5 pt-5 flex-md-wrap">
+    <h2 class="section-title">@L["About_Title"]</h2>
+
+    <div class="d-flex justify-content-md-evenly">
+        <img src="/images/juuso_desk_promo.jpg" class="about-image" alt="Image" />
+        <div class="lead text-center about-text">
+            <p>
+                @L["About_Bio1"]
+            </p>
+            <p>
+                @L["About_Bio2"]
+            </p>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

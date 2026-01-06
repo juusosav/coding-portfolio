@@ -1,0 +1,71 @@
+﻿@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> L
+
+@using CodingPortfolioWebsite.Pages.Components;
+@using CodingPortfolioWebsite.Models;
+
+<div id="techstack" class="container fade-in mt-5 pt-5">
+    <h2 class="section-title">@L["TechStack_Title"]</h2>
+
+    <h4 class="section-title">@L["TechStack_ProgrammingLangs"]</h4>
+    <div class="d-flex justify-content-center">
+        @foreach (var lg in programmingLogos)
+        {
+            <TechLogoItem Logo="@lg.Logo" Name="@lg.Name" />
+        }
+    </div>
+
+    <h4 class="section-title">@L["TechStack_WebDevelopment"]</h4>
+    <div class="d-flex justify-content-center">
+        @foreach (var lg in webDevelopmentLogos)
+        {
+            <TechLogoItem Logo="@lg.Logo" Name="@lg.Name" />
+        }
+    </div>
+
+    <h4 class="section-title">@L["TechStack_Databases"]</h4>
+    <div class="d-flex justify-content-center">
+        @foreach (var lg in databaseLogos)
+        {
+            <TechLogoItem Logo="@lg.Logo" Name="@lg.Name" />
+        }
+    </div>
+
+    <h4 class="section-title">@L["TechStack_CloudComputing"]</h4>
+    <div class="d-flex justify-content-center">
+        @foreach (var lg in cloudComputingLogos)
+        {
+            <TechLogoItem Logo="@lg.Logo" Name="@lg.Name" />
+        }
+    </div>
+    
+</div>
+
+@code {
+
+    List<LogoModel> programmingLogos = new()
+    {
+        new() { Logo = "images/csharp-logo_svgstack.svg", Name = "C#"},
+        new() { Logo = "images/javascript-logo_svgstack.svg", Name = "JavaScript" },
+        new() { Logo = "images/flutter-logo_svgstack.svg", Name = "Flutter" }
+    };
+
+    List<LogoModel> webDevelopmentLogos = new()
+    {
+        new() { Logo = "images/blazor-logo.svg", Name = "Blazor Server/WASM" },
+        new() { Logo = "images/NET_Core_Logo.svg", Name = "ASP.NET Core" },
+        new() { Logo = "images/css-logo_svgstack.svg", Name = "CSS (Bootstrap 5)" },
+        new() { Logo = "images/html5-logo_svgstack.svg", Name = "HTML5" }
+    };
+
+    List<LogoModel> databaseLogos = new()
+    {
+        new() { Logo = "images/postgresql-logo.svg", Name = "PostgreSQL" },
+        new() { Logo = "images/sqlite-logo.svg", Name = "SQLite" }
+        
+    };
+
+    List<LogoModel> cloudComputingLogos = new()
+    {
+        new() { Logo = "images/azure-logo.svg", Name = "Microsoft Azure" }
+    };
+}

@@ -1,0 +1,29 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+@using CodingPortfolioWebsite.Pages.Components;
+
+<Hero />
+<About />
+<TechStack />
+<Projects />
+<Contact />
+
+@code {
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        try
+        {
+            if (firstRender)
+            {
+                await Task.Yield();
+                await JS.InvokeVoidAsync("initScrollAnimations");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error initializing scroll animations: {ex.Message}");
+
+        }
+    }
+}

@@ -1,0 +1,41 @@
+﻿@inject IJSRuntime JS
+@inherits LayoutComponentBase
+@inject Microsoft.Extensions.Localization.IStringLocalizer<SharedResource> L
+
+<div class="contained-fluid p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">@L["NavMenu_BackToTop"]</a>
+
+            <div class="navbar-nav">
+                <a class="nav-link" href="#about">@L["Nav_About"]</a>
+                <a class="nav-link" href="#techstack">@L["Nav_TechStack"]</a>
+                <a class="nav-link" href="#projects">@L["Nav_Projects"]</a>
+                <a class="nav-link" href="#contact">@L["Nav_Contact"]</a>
+
+                <button class="btn btn-dark" @onclick='() => ChangeLanguage("en-US")'>
+                    <img class="nav-lang" src="images/gb_flag_logo.svg" alt="English" />
+                </button>
+                <button class="btn btn-dark" @onclick='() => ChangeLanguage("fi-FI")'>
+                    <img class="nav-lang" src="images/fi_flag_logo.svg" alt="Finnish" />
+                </button>
+
+            </div>
+
+
+        </div>
+    </nav>
+
+    <main>
+        <div>
+            @Body
+        </div>
+    </main>
+</div>
+
+@code {
+    async Task ChangeLanguage(string culture)
+    {
+        await JS.InvokeVoidAsync("cultureManager.set", culture);
+    }
+}

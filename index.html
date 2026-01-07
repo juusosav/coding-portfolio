@@ -57,15 +57,19 @@
     <script>
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
-                // dotnetjs / dotnetwasm / timezonedata: use default loading
-                switch (type) {
-                    case 'dotnetjs':
-                    case 'dotnetwasm':
-                    case 'timezonedata':
-                        return null;
-                    default:
-                        return fetch(defaultUri, { cache: 'no-cache', integrity: integrity });
+                // Only use custom loader for .br files
+                if (type !== 'dotnetjs' && type !== 'dotnetwasm' && location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) throw new Error(response.statusText);
+                        const buffer = await response.arrayBuffer();
+                        const decompressed = BrotliDecode(new Int8Array(buffer));
+                        const contentType = type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressed, { headers: { 'content-type': contentType } });
+                    })();
                 }
+                // Let Blazor handle dotnetjs and dotnetwasm normally
+                return null;
             }
         });
     </script>

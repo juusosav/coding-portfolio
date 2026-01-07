@@ -55,25 +55,8 @@
 
     <!-- Blazor WebAssembly -->
     <script src="_framework/blazor.webassembly.66stpp682q.js" autostart="false"></script>
-    <script src="decode.js"></script>
     <script>
-        Blazor.start({
-            loadBootResource: function (type, name, defaultUri, integrity) {
-                // Only use custom loader for .br files
-                if (type !== 'dotnetjs' && type !== 'dotnetwasm' && location.hostname !== 'localhost') {
-                    return (async function () {
-                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
-                        if (!response.ok) throw new Error(response.statusText);
-                        const buffer = await response.arrayBuffer();
-                        const decompressed = BrotliDecode(new Int8Array(buffer));
-                        const contentType = type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
-                        return new Response(decompressed, { headers: { 'content-type': contentType } });
-                    })();
-                }
-                // Let Blazor handle dotnetjs and dotnetwasm normally
-                return null;
-            }
-        });
+        Blazor.start();
     </script>
 
     <!-- Site-specific JS -->

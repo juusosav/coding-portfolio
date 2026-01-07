@@ -57,24 +57,18 @@
     <script>
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
-                // Only handle compressed resources
-                if (type === 'dotnetwasm' || type === 'dotnetjs' || type === 'assembly') {
-                    // Try to fetch the .br file
-                    return fetch(defaultUri + '.br', { cache: 'no-cache' })
-                        .then(response => {
-                            if (!response.ok) return fetch(defaultUri); // fallback
-                            return response.arrayBuffer().then(buffer => {
-                                return new Response(new Uint8Array(buffer), {
-                                    headers: { 'content-type': type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream' }
-                                });
-                            });
-                        });
+                console.log(`Loading: '${type}', '${name}', '${defaultUri}', '${integrity}'`);
+                switch (type) {
+                    case 'dotnetjs':
+                    case 'dotnetwasm':
+                    case 'timezonedata':
+                        return null;
+                    default:
+                        return fetch(defaultUri, { cache: 'no-cache', integrity: integrity });
                 }
-
-                // All other resources (CSS, JS) use default
-                return defaultUri;
             }
         });
+    </script>
     </script>
 
     <script src="js/interop.js"></script>

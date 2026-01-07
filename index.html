@@ -57,27 +57,24 @@
     <script>
         Blazor.start({
             loadBootResource: function (type, name, defaultUri, integrity) {
-                if (type === 'dotnetjs') {
-                    // Let Blazor use the default URI for dotnet.js
-                    return defaultUri;
+                // Only handle compressed resources
+                if (type === 'dotnetwasm' || type === 'dotnetjs' || type === 'assembly') {
+                    // Try to fetch the .br file
+                    return fetch(defaultUri + '.br', { cache: 'no-cache' })
+                        .then(response => {
+                            if (!response.ok) return fetch(defaultUri); // fallback
+                            return response.arrayBuffer().then(buffer => {
+                                return new Response(new Uint8Array(buffer), {
+                                    headers: { 'content-type': type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream' }
+                                });
+                            });
+                        });
                 }
 
-                if (location.hostname !== 'localhost') {
-                    return (async function () {
-                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
-                        if (!response.ok) throw new Error(response.statusText);
-                        const buffer = await response.arrayBuffer();
-                        const decompressed = BrotliDecode(new Int8Array(buffer));
-                        const contentType = type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
-                        return new Response(decompressed, { headers: { 'content-type': contentType } });
-                    })();
-                }
-
-                // For localhost, use default
+                // All other resources (CSS, JS) use default
                 return defaultUri;
             }
         });
-
     </script>
 
     <script src="js/interop.js"></script>

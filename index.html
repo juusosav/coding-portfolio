@@ -14,6 +14,25 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/site.css" />
     <link href="CodingPortfolioWebsite.styles.css" rel="stylesheet" />
+
+    <script type="text/javascript">
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location));
+    </script>
 </head>
 
 <body>
@@ -37,14 +56,13 @@
         Blazor.start({
             loadBootResource: async function (type, name, defaultUri, integrity) {
                 if (type === 'dotnetwasm' && location.hostname !== 'localhost') {
-                    // load precompressed .br for faster download
                     const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
                     if (!response.ok) throw new Error(response.statusText);
                     const buffer = await response.arrayBuffer();
                     const decompressed = BrotliDecode(new Int8Array(buffer));
                     return new Response(decompressed, { headers: { 'content-type': 'application/wasm' } });
                 }
-                return fetch(defaultUri);
+                return fetch(defaultUri); // all other resources
             }
         });
     </script>

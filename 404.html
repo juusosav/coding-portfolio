@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="0; URL=./index.html">
-    <script>
-        // fallback for browsers not honoring meta refresh
-        window.location.href = "./index.html";
-    </script>
-</head>
-<body>
-</body>git 
-</html>
+<script>
+    var target = window.location.pathname.replace('/CodingPortfolio/', '');
+    window.location.href = '/CodingPortfolio/?p=' + target + window.location.search + window.location.hash;
+</script>

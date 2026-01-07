@@ -56,19 +56,28 @@
     <script src="_framework/blazor.webassembly.66stpp682q.js" autostart="false"></script>
     <script>
         Blazor.start({
-            loadBootResource: async function (type, name, defaultUri, integrity) {
-                if (type === 'dotnetwasm' && location.hostname !== 'localhost') {
-                    // fetch Brotli compressed wasm if available
-                    const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
-                    if (!response.ok) throw new Error(response.statusText);
-                    const buffer = await response.arrayBuffer();
-                    const decompressed = BrotliDecode(new Int8Array(buffer));
-                    return new Response(decompressed, { headers: { 'content-type': 'application/wasm' } });
+            loadBootResource: function (type, name, defaultUri, integrity) {
+                if (type === 'dotnetjs') {
+                    // Let Blazor use the default URI for dotnet.js
+                    return defaultUri;
                 }
-                // all other resources load normally
+
+                if (location.hostname !== 'localhost') {
+                    return (async function () {
+                        const response = await fetch(defaultUri + '.br', { cache: 'no-cache' });
+                        if (!response.ok) throw new Error(response.statusText);
+                        const buffer = await response.arrayBuffer();
+                        const decompressed = BrotliDecode(new Int8Array(buffer));
+                        const contentType = type === 'dotnetwasm' ? 'application/wasm' : 'application/octet-stream';
+                        return new Response(decompressed, { headers: { 'content-type': contentType } });
+                    })();
+                }
+
+                // For localhost, use default
                 return defaultUri;
             }
         });
+
     </script>
 
     <script src="js/interop.js"></script>

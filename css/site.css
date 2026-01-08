@@ -1,5 +1,30 @@
-﻿html {
+﻿html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html {
     scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-loader {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.navbar {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .navbar-brand {
@@ -8,14 +33,14 @@
     opacity: 0;
 }
 
-.navbar-brand.visible {
-    opacity: 1;
-}
+    .navbar-brand.visible {
+        opacity: 1;
+    }
 
-.navbar-brand:hover, .navbar-brand:focus {
-    text-decoration: none;
-    color: grey;
-}
+    .navbar-brand:hover, .navbar-brand:focus {
+        text-decoration: none;
+        color: grey;
+    }
 
 .nav-lang {
     margin-bottom: 2px;
@@ -55,14 +80,23 @@
 
 .project-card {
     height: 100%;
+    overflow: hidden;
+    margin-bottom: 4rem;
 }
 
-.project-card img {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    flex: 0 1 auto;
-    object-fit: contain;
+    .project-card img {
+        width: 100%;
+        height: auto;
+        min-height: 20%;
+        min-width: 200px;
+        border-radius: 8px;
+        object-fit: contain;
+    }
+
+.project-button {
+    position: absolute;
+    margin-bottom: 1rem;
+    bottom: 0;
 }
 
 .about-image {
@@ -77,6 +111,7 @@
     width: 20rem;
     font-weight: 375;
     color: black;
+    margin-left: 1rem;
 }
 
 .techstack-image img {
@@ -85,16 +120,17 @@
     transition: 0.3s ease;
 }
 
-.techstack-image img:hover {
-    transform: scale(1.10);
-}
+    .techstack-image img:hover {
+        transform: scale(1.10);
+    }
 
 #blazor-error-ui {
     display: none !important;
 }
 
-.form-box {
-    padding: 0 25%;
+.contact-form-box {
+    padding: 0 15%;
+    max-width: 100%;
     justify-content: center;
     align-items: center;
 }

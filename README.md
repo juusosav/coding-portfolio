@@ -26,7 +26,7 @@ Key goals of the project:
 
 ## Technology Stack
 
-- **Blazor WebAssembly (.NET 10)**
+- **Blazor WebAssembly (.NET 8)**
 - **C#**
 - **ASP.NET Core**
 - **Bootstrap 5**
@@ -72,7 +72,7 @@ CodingPortfolio/
 
 Prerequisites
 
-- **.NET SDK 10.0 or newer**
+- **.NET SDK 8.0 or newer**
 - **Git**
 - **A modern web browser (Chrome, Edge, Firefox)**
 

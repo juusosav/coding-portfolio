@@ -22,25 +22,23 @@ var storedCulture = await js.InvokeAsync<string>(
     "cultureManager.get"
     );
 
-if (!string.IsNullOrWhiteSpace(storedCulture))
-{
-    var culture = new CultureInfo(storedCulture);
-    CultureInfo.DefaultThreadCurrentCulture = culture;
-    CultureInfo.DefaultThreadCurrentUICulture = culture;
-}
-else
-{
-    CultureInfo.DefaultThreadCurrentCulture = defaultCulture;
-    CultureInfo.DefaultThreadCurrentUICulture = defaultCulture;
+CultureInfo culture;
 
-}
-
+// If localStorage contains garbage
 try
 {
-    await host.RunAsync();
+    culture = !string.IsNullOrWhiteSpace(storedCulture)
+        ? new CultureInfo(storedCulture)
+        : new CultureInfo("en-US");
 }
-catch (Exception ex)
+
+catch (CultureNotFoundException)
 {
-    Console.WriteLine(ex);
-    throw;
+    culture = new CultureInfo("en-US");
 }
+
+CultureInfo.DefaultThreadCurrentCulture = culture;
+CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+
+await host.RunAsync();

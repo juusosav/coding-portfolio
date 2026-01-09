@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/site.css" />
     <link href="CodingPortfolioWebsite.styles.css" rel="stylesheet" />
-    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
 </head>
+
 
 <body>
 
@@ -25,22 +26,23 @@
         </div>
     </div>
 
-    <div class="custom-loader" id="blazor-error-ui">
+    <div id="blazor-error-ui">
         An unhandled error has occurred.
         <a href="." class="reload">Reload</a>
         <span class="dismiss">×</span>
     </div>
 
-
-    <!-- Blazor WebAssembly -->
-    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Website scrolling fix on refresh -->
     <script src="js/scrollFix.js"></script>
 
+    <!-- Blazor WebAssembly -->
+    <script src="_framework/blazor.webassembly.js"></script>
+
     <!-- Site-specific JS -->
-    <script src="js/interop.js"></script>
-    <script src="js/culture.js"></script>
+    <script src="js/interop.js" defer></script>
+    <script src="js/culture.js" defer></script>
 
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>

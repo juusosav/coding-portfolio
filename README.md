@@ -6,7 +6,7 @@ The site is designed as a single-page application with smooth navigation, respon
 The site showcases my skills, projects, and technical stack, and serves as a central hub for presenting my work.
 
 **Live site:**  
-https://juusosav.github.io/CodingPortfolio/
+https://juusosav.github.io/coding-portfolio/
 
 
 ---
@@ -83,8 +83,8 @@ Prerequisites
 Clone the repository:
 
 ```bash
-git clone https://github.com/juusosav/CodingPortfolio.git
-cd CodingPortfolio
+git clone https://github.com/juusosav/coding-portfolio.git
+cd coding-portfolio
 ```
 
 Run the Blazor WebAssembly project:

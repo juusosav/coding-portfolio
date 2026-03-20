@@ -6,7 +6,7 @@ The site is designed as a single-page application with smooth navigation, respon
 The site showcases my skills, projects, and technical stack, and serves as a central hub for presenting my work.
 
 **Live site:**  
-https://juusosav.github.io/coding-portfolio/
+https://jsavolainen.fi/
 
 
 ---

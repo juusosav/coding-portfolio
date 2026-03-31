@@ -185,11 +185,11 @@ So don't be a stranger! Feel free to contact me and we can discuss your software
   <data name="Nav_TechStack" xml:space="preserve">
     <value>Tech Stack</value>
   </data>
-  <data name="Project_ExpenseTracker_Desc" xml:space="preserve">
-    <value>A console application to track personal expenses, built with C#. Data persistence with JSON.</value>
+  <data name="Project_GoldenBarbers_Desc" xml:space="preserve">
+    <value>Full-stack appointment booking web application built with Blazor WebAssembly + ASP.NET Core. Possibility to book barber appointments online while providing an admin panel for managing barbers, services, and appointments.</value>
   </data>
-  <data name="Project_ExpenseTracker_Title" xml:space="preserve">
-    <value>Expense Tracker</value>
+  <data name="Project_GoldenBarbers_Title" xml:space="preserve">
+    <value>Golden Barbers</value>
   </data>
   <data name="Project_HabitTracker_Desc" xml:space="preserve">
     <value>A habit tracker application built in Blazor/.NET. Live demo hosted on Microsoft Azure.</value>

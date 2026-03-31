@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\files\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Update="SharedResource.fi.resx">
       <Generator></Generator>
     </EmbeddedResource>

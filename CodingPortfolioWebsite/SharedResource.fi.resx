@@ -183,11 +183,11 @@
   <data name="Nav_TechStack" xml:space="preserve">
     <value>Teknologiat</value>
   </data>
-  <data name="Project_ExpenseTracker_Desc" xml:space="preserve">
-    <value>Konsoliohjelma henkilökohtaiseen kuluseurantaan  C# -kielellä. Datan pysyvyys JSON -muodossa.</value>
+  <data name="Project_GoldenBarbers_Desc" xml:space="preserve">
+    <value>Full-stack varaussivusto parturiliikkeelle, tehty Blazor WebAssemblyllä ja ASP.NET Corella. Sivustolla voi varata parturiaikoja sekä tutkia admin-paneelia, jossa sivuston sisältöjä voi muokata.</value>
   </data>
-  <data name="Project_ExpenseTracker_Title" xml:space="preserve">
-    <value>Kuluseuranta -ohjelma</value>
+  <data name="Project_GoldenBarbers_Title" xml:space="preserve">
+    <value>Golden Barbers -parturisivusto</value>
   </data>
   <data name="Project_HabitTracker_Desc" xml:space="preserve">
     <value>Tapaseuranta-ohjelmisto, joka on tehty Blazorilla ja .NET:lla. Livedemo löytyy Microsoft Azuresta.</value>

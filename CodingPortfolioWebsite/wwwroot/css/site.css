@@ -147,9 +147,8 @@ img {
 
     .project-card img {
         width: 100%;
-        height: auto;
-        min-height: 20%;
-        min-width: 200px;
+        height: 50%;
+        background-color: rgb(17, 18, 19);
         border-radius: 8px;
         object-fit: contain;
     }

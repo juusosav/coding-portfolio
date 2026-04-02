@@ -41,7 +41,6 @@ img {
 
 .navbar {
     max-width: 100%;
-    overflow-x: hidden;
 }
 
 .navbar-brand {
@@ -59,9 +58,8 @@ img {
         color: grey;
     }
 
-.nav-lang {
-    height: 1rem;
-    background-color: black;
+.nav-lang-button {
+    height: 2rem;
 }
 
 .btn-portfolio {

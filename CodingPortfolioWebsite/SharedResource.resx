@@ -230,4 +230,7 @@ So don't be a stranger! Feel free to contact me and we can discuss your software
   <data name="Hero_CVLink" xml:space="preserve">
     <value>https://drive.google.com/uc?export=download&amp;id=15xxFXDuwmceyqXSt-2duK6HfFJ_YSRi2</value>
   </data>
+  <data name="NavMenu_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
 </root>

@@ -58,8 +58,10 @@ img {
         color: grey;
     }
 
-.nav-lang-button {
+.nav-lang {
+    width: 2rem;
     height: 2rem;
+    background-color: black;
 }
 
 .btn-portfolio {

@@ -25,13 +25,14 @@
                     <a class="nav-link" href="#techstack">@L["Nav_TechStack"]</a>
                     <a class="nav-link" href="#projects">@L["Nav_Projects"]</a>
                     <a class="nav-link" href="#contact">@L["Nav_Contact"]</a>
+                    <br />
+                    <button class="btn btn-dark ms-4" @onclick='() => ChangeLanguage("en-US")'>
+                        <span>ENG</span>
+                    </button>
+                    <button class="btn btn-dark" @onclick='() => ChangeLanguage("fi-FI")'>
+                        <span>FIN</span>
+                    </button>
 
-                    <button class="btn btn-dark nav-lang-button" @onclick='() => ChangeLanguage("en")'>
-                        🇬🇧 English
-                    </button>
-                    <button class="btn btn-dark nav-lang-button" @onclick='() => ChangeLanguage("fi")'>
-                        🇫🇮 Suomi
-                    </button>
                 </div>
             </div>
 

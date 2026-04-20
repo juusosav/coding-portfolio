@@ -121,7 +121,7 @@
     <value>Olen C# ja .NET -kehittäjä, jonka intohimo on tehdä interaktiivisia sekä käyttäjälähtöisiä full-stack -ratkaisuja.</value>
   </data>
   <data name="About_Bio2" xml:space="preserve">
-    <value>Monipuolinen taustani kiinteistöalan asiakaspalvelussa sekä julkisessa työvoimahallinnossa mahdollistaa IT-alalla menestymisen sekä kehittymisen ammattilaisena. Joten otathan yhteyttä mikäli haluat keskustella ohjelmistokehitystarpeistasi.</value>
+    <value>Ohjelmistokehitystyöni ohella tarjoan freelance-palveluita Juuso Savolainen Software Developmentin kautta. Olitpa sitten tarvitsemassa bugikorjausta, uutta toiminnallisuutta tai kokonaista web-sovellusta niin toimitan sinulle siistiä ja ylläpidettävää koodia.</value>
   </data>
   <data name="About_Title" xml:space="preserve">
     <value>Tietoa minusta</value>
@@ -230,5 +230,50 @@
   </data>
   <data name="NavMenu_Language" xml:space="preserve">
     <value>Kieli</value>
+  </data>
+  <data name="Hero_FreelanceAvailable" xml:space="preserve">
+    <value>- Vapaana freelance-projekteille - .NET &amp; Blazor -</value>
+  </data>
+  <data name="Services_Title" xml:space="preserve">
+    <value>Palvelut</value>
+  </data>
+  <data name="Services_ContentTitle" xml:space="preserve">
+    <value>Otan vastaan selkeästi rajattuja freelance-projekteja. Tässä tyypillisiä toimeksiantoja:</value>
+  </data>
+  <data name="Services_Bugs" xml:space="preserve">
+    <value>Bugikorjaukset ja ylläpito — alkaen 100 €</value>
+  </data>
+  <data name="Services_Feature" xml:space="preserve">
+    <value>Rajattu toiminnallisuus — alkaen 150 €</value>
+  </data>
+  <data name="Services_LandingPage" xml:space="preserve">
+    <value>Laskeutumissivu / yksinkertainen sivusto — alkaen 400 €</value>
+  </data>
+  <data name="Services_InternalTool" xml:space="preserve">
+    <value>Blazor-sisäinen työkalu / SPA — alkaen 800 €</value>
+  </data>
+  <data name="Services_FullWebApp" xml:space="preserve">
+    <value>Täydellinen web-sovellus — alkaen 1 500 €</value>
+  </data>
+  <data name="Services_AzureSimple" xml:space="preserve">
+    <value>Azure-käyttöönotto (yksinkertainen) — alkaen 100 €</value>
+  </data>
+  <data name="Services_AzureComplex" xml:space="preserve">
+    <value>Azure-käyttöönotto (monimutkainen) — alkaen 300 €</value>
+  </data>
+  <data name="Services_Disclaimer1" xml:space="preserve">
+    <value>Kaikki hinnat ovat suuntaa-antavia ja tarkentuvat projektin laajuuden mukaan.</value>
+  </data>
+  <data name="Services_HourlyRate" xml:space="preserve">
+    <value>Tuntiveloitus — 40 €/h</value>
+  </data>
+  <data name="Contact_Text" xml:space="preserve">
+    <value>Kiinnostuitko yhteistyöstä? Oli sinulla mielessä konkreettinen projekti tai haluat vain kartoittaa mahdollisuuksia — ota rohkeasti yhteyttä.</value>
+  </data>
+  <data name="Services_Disclaimer2" xml:space="preserve">
+    <value>Kirjallinen tarjous toimitetaan ennen töiden aloittamista.</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>Palvelut</value>
   </data>
 </root>

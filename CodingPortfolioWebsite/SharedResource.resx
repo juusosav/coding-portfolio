@@ -122,8 +122,7 @@
 I enjoy creating interactive and user-friendly full-stack experiences.</value>
   </data>
   <data name="About_Bio2" xml:space="preserve">
-    <value>My diverse background in residential customer services and employment services is a great asset to my journey in the IT world.
-So don't be a stranger! Feel free to contact me and we can discuss your software development needs.</value>
+    <value>Alongside my development work, I offer freelance software development services through Juuso Savolainen Software Development. Whether you need a bug squashed, a feature built or a complete web application — I deliver clean, maintainable solutions.</value>
   </data>
   <data name="About_Title" xml:space="preserve">
     <value>About Me</value>
@@ -232,5 +231,51 @@ So don't be a stranger! Feel free to contact me and we can discuss your software
   </data>
   <data name="NavMenu_Language" xml:space="preserve">
     <value>Language</value>
+  </data>
+  <data name="Hero_FreelanceAvailable" xml:space="preserve">
+    <value>- Available for freelance .NET &amp; Blazor projects -</value>
+  </data>
+  <data name="Services_Title" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services_ContentTitle" xml:space="preserve">
+    <value>I take on focused, well-scoped freelance projects. Here's what I typically work on:</value>
+  </data>
+  <data name="Services_Bugs" xml:space="preserve">
+    <value>Bug fixing &amp; maintenance — from €100
+</value>
+  </data>
+  <data name="Services_Feature" xml:space="preserve">
+    <value>Fixed scope feature development — from €150</value>
+  </data>
+  <data name="Services_LandingPage" xml:space="preserve">
+    <value>Landing page / simple website — from €400</value>
+  </data>
+  <data name="Services_InternalTool" xml:space="preserve">
+    <value>Blazor internal tool / SPA — from €800</value>
+  </data>
+  <data name="Services_FullWebApp" xml:space="preserve">
+    <value>Full web application — from €1,500</value>
+  </data>
+  <data name="Services_AzureSimple" xml:space="preserve">
+    <value>Azure deployment (simple) — from €100</value>
+  </data>
+  <data name="Services_AzureComplex" xml:space="preserve">
+    <value>Azure deployment (complex) — from €300</value>
+  </data>
+  <data name="Services_Disclaimer1" xml:space="preserve">
+    <value>All prices are indicative and subject to scope.</value>
+  </data>
+  <data name="Services_HourlyRate" xml:space="preserve">
+    <value>Standard hourly rate — €40/hr</value>
+  </data>
+  <data name="Contact_Text" xml:space="preserve">
+    <value>Interested in working together? Whether you have a project in mind or just want to explore possibilities, feel free to reach out.</value>
+  </data>
+  <data name="Services_Disclaimer2" xml:space="preserve">
+    <value>A written proposal is provided before any work begins.</value>
+  </data>
+  <data name="Nav_Services" xml:space="preserve">
+    <value>Services</value>
   </data>
 </root>

@@ -178,34 +178,34 @@ I enjoy creating interactive and user-friendly full-stack experiences.</value>
   <data name="Nav_Contact" xml:space="preserve">
     <value>Contact</value>
   </data>
-  <data name="Nav_Projects" xml:space="preserve">
-    <value>Projects</value>
+  <data name="Nav_PersonalProjects" xml:space="preserve">
+    <value>Personal Projects</value>
   </data>
   <data name="Nav_TechStack" xml:space="preserve">
     <value>Tech Stack</value>
   </data>
-  <data name="Project_GoldenBarbers_Desc" xml:space="preserve">
+  <data name="PersonalProject_GoldenBarbers_Desc" xml:space="preserve">
     <value>Full-stack appointment booking web application built with Blazor WebAssembly + ASP.NET Core. Possibility to book barber appointments online while providing an admin panel for managing barbers, services, and appointments.</value>
   </data>
-  <data name="Project_GoldenBarbers_Title" xml:space="preserve">
-    <value>Golden Barbers</value>
+  <data name="PersonalProject_GoldenBarbers_Title" xml:space="preserve">
+    <value>Golden Barbers Barbershop</value>
   </data>
-  <data name="Project_HabitTracker_Desc" xml:space="preserve">
+  <data name="PersonalProject_HabitTracker_Desc" xml:space="preserve">
     <value>A habit tracker application built in Blazor/.NET. Live demo hosted on Microsoft Azure.</value>
   </data>
-  <data name="Project_HabitTracker_Title" xml:space="preserve">
-    <value>Habit Tracker</value>
+  <data name="PersonalProject_HabitTracker_Title" xml:space="preserve">
+    <value>Habit Tracker App</value>
   </data>
-  <data name="Project_PortfolioSite_Desc" xml:space="preserve">
+  <data name="PersonalProject_PortfolioSite_Desc" xml:space="preserve">
     <value>This portfolio website itself is made with Blazor WASM (WebAssembly).</value>
   </data>
-  <data name="Project_PortfolioSite_Title" xml:space="preserve">
-    <value>Portfolio Website</value>
+  <data name="PersonalProject_PortfolioSite_Title" xml:space="preserve">
+    <value>Portfolio Website App</value>
   </data>
-  <data name="Project_Title" xml:space="preserve">
-    <value>Projects</value>
+  <data name="PersonalProject_Title" xml:space="preserve">
+    <value>Personal Projects</value>
   </data>
-  <data name="Project_ViewButton" xml:space="preserve">
+  <data name="PersonalProject_ViewButton" xml:space="preserve">
     <value>View</value>
   </data>
   <data name="TechStack_CloudComputing" xml:space="preserve">
@@ -277,5 +277,20 @@ I enjoy creating interactive and user-friendly full-stack experiences.</value>
   </data>
   <data name="Nav_Services" xml:space="preserve">
     <value>Services</value>
+  </data>
+  <data name="ClientProject_Title" xml:space="preserve">
+    <value>Client Projects</value>
+  </data>
+  <data name="ClientProject_ViewButton" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ClientProject_Lohijurmu_Title" xml:space="preserve">
+    <value>Lohijurmu Oy - Website and Store</value>
+  </data>
+  <data name="ClientProject_Lohijurmu_Desc" xml:space="preserve">
+    <value>Built a redesigned website and e-commerce store for Lohijurmu Oy using WordPress and WooCommerce. The project included a 50+ product catalogue with variations, automatic order confirmation emails, and shipping pricing for Finland.</value>
+  </data>
+  <data name="Nav_ClientProjects" xml:space="preserve">
+    <value>Client Projects</value>
   </data>
 </root>

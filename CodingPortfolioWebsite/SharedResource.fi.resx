@@ -177,34 +177,34 @@
   <data name="Nav_Contact" xml:space="preserve">
     <value>Ota yhteyttä</value>
   </data>
-  <data name="Nav_Projects" xml:space="preserve">
-    <value>Projektit</value>
+  <data name="Nav_PersonalProjects" xml:space="preserve">
+    <value>Omat projektit</value>
   </data>
   <data name="Nav_TechStack" xml:space="preserve">
     <value>Teknologiat</value>
   </data>
-  <data name="Project_GoldenBarbers_Desc" xml:space="preserve">
+  <data name="PersonalProject_GoldenBarbers_Desc" xml:space="preserve">
     <value>Full-stack varaussivusto parturiliikkeelle, tehty Blazor WebAssemblyllä ja ASP.NET Corella. Sivustolla voi varata parturiaikoja sekä tutkia admin-paneelia, jossa sivuston sisältöjä voi muokata.</value>
   </data>
-  <data name="Project_GoldenBarbers_Title" xml:space="preserve">
+  <data name="PersonalProject_GoldenBarbers_Title" xml:space="preserve">
     <value>Golden Barbers -parturisivusto</value>
   </data>
-  <data name="Project_HabitTracker_Desc" xml:space="preserve">
+  <data name="PersonalProject_HabitTracker_Desc" xml:space="preserve">
     <value>Tapaseuranta-ohjelmisto, joka on tehty Blazorilla ja .NET:lla. Livedemo löytyy Microsoft Azuresta.</value>
   </data>
-  <data name="Project_HabitTracker_Title" xml:space="preserve">
+  <data name="PersonalProject_HabitTracker_Title" xml:space="preserve">
     <value>Tapaseuranta -ohjelma</value>
   </data>
-  <data name="Project_PortfolioSite_Desc" xml:space="preserve">
+  <data name="PersonalProject_PortfolioSite_Desc" xml:space="preserve">
     <value>Tämä koodausportfolio on tehty itsessään Blazor WASM (WebAssembly) -ohjelmistokehyksellä.</value>
   </data>
-  <data name="Project_PortfolioSite_Title" xml:space="preserve">
+  <data name="PersonalProject_PortfolioSite_Title" xml:space="preserve">
     <value>Portfolio -nettisivu</value>
   </data>
-  <data name="Project_Title" xml:space="preserve">
-    <value>Projektit</value>
+  <data name="PersonalProject_Title" xml:space="preserve">
+    <value>Omat Projektit</value>
   </data>
-  <data name="Project_ViewButton" xml:space="preserve">
+  <data name="PersonalProject_ViewButton" xml:space="preserve">
     <value>Tutustu</value>
   </data>
   <data name="TechStack_CloudComputing" xml:space="preserve">
@@ -275,5 +275,20 @@
   </data>
   <data name="Nav_Services" xml:space="preserve">
     <value>Palvelut</value>
+  </data>
+  <data name="ClientProject_Title" xml:space="preserve">
+    <value>Asiakasprojektit</value>
+  </data>
+  <data name="ClientProject_ViewButton" xml:space="preserve">
+    <value>Tutustu</value>
+  </data>
+  <data name="ClientProject_Lohijurmu_Title" xml:space="preserve">
+    <value>Lohijurmu Oy - Verkkosivut ja kauppa</value>
+  </data>
+  <data name="ClientProject_Lohijurmu_Desc" xml:space="preserve">
+    <value>Rakensin Lohijurmu Oy:lle uudistetun verkkosivuston sekä verkkokaupan WordPress- ja WooCommerce-alustoille. Projekti sisälsi 50+ tuotteen katalogin variaatioineen, automaattiset tilausvahvistukset sähköpostitse sekä toimitushinnoittelun Suomeen.</value>
+  </data>
+  <data name="Nav_ClientProjects" xml:space="preserve">
+    <value>Asiakasprojektit</value>
   </data>
 </root>
